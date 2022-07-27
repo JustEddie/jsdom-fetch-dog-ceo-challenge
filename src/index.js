@@ -21,11 +21,13 @@ fetch(breedUrl)
     const breedList = document.getElementById("dog-breeds");
     const breeds = json.message;
     const breedDropdown = document.getElementById("breed-dropdown");
-
+    
     for (const breed in breeds) {
       const node = document.createElement("li");
 
       breedDropdown.addEventListener('change',(event)=>{
+
+
         if (breed.charAt(0) === event.target.value) {
             node.innerText = breed;
             breedList.appendChild(node);
